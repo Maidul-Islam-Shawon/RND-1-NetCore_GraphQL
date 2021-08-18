@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\maidul\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\maidul\\.nuget\\packages"
+    ]
+  }
+}
