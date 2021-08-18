@@ -20,17 +20,19 @@ namespace NetCore_GraphQL.Repository
             _context.Database.EnsureCreated();
         }
 
-        public void AddCustomer(CustomerVM customer)
+        public async Task AddCustomer(Customer customer)
         {
-            var _customer = new Customer()
-            {
-                Name = customer.Name,
-                Address = customer.Address,
-                Age = customer.Age,
-                ContactNumber = customer.ContactNumber,
-                Email = customer.Email
-            };
-            _context.Customer.Add(_customer);
+            //var _customer = new Customer()
+            //{
+            //    Name = customer.Name,
+            //    Address = customer.Address,
+            //    Age = customer.Age,
+            //    ContactNumber = customer.ContactNumber,
+            //    Email = customer.Email
+            //};
+
+            _context.Customer.Add(customer);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<ICollection<Customer>> GetAllCustomersAsync()

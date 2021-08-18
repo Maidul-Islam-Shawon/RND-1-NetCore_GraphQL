@@ -145,3 +145,5 @@ D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\runtimes\win-arm\l
 D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\AutoMapper.dll
+D:\R&D\RND-1\NetCore_GraphQL\NetCore_GraphQL\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

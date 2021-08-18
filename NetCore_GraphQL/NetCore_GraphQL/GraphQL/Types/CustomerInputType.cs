@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetCore_GraphQL.GraphQL.Types
 {
-    public class CustomerInputType : ObjectGraphType<Customer>
+    public class CustomerInputType : InputObjectGraphType<Customer>
     {
         public CustomerInputType()
         {
