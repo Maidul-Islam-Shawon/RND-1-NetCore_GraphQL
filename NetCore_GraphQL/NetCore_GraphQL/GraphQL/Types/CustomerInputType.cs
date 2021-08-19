@@ -11,9 +11,10 @@ namespace NetCore_GraphQL.GraphQL.Types
     {
         public CustomerInputType()
         {
-            Name = "CustomerInput";
-            Description = "A List of Custmers data";
+            Name = "CustomerInput";     //Name of Input Type
+            Description = "Insert a new Customer Information";  //Description of Input Type
             
+            //...include fields which will be use as input field...//
             Field(a => a.Name).Description("Name of the Customer");
             Field(a => a.Age).Description("Age of the Customer");
             Field(a => a.Email, nullable: true).Description("Email of the Customer");

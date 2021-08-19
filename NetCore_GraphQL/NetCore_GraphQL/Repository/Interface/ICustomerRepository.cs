@@ -12,7 +12,8 @@ namespace NetCore_GraphQL.Repository.Interface
         Task<ICollection<Customer>> GetAllCustomersAsync();
         Task<Customer> GetCustomerByIdAsync(Guid id);
         Task<IList<Customer>> GetCustomerByName(string name);
-        //Task AddCustomer(CustomerVM customer);
-        Task AddCustomer(Customer customer);
+        Task<Customer> AddCustomer(Customer customer);
+        Task<Customer> UpdateCustomer(Customer updatedCustomerData);
+        Task DeleteCustomer(Customer customer);
     }
 }

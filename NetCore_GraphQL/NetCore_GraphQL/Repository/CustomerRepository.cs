@@ -20,21 +20,6 @@ namespace NetCore_GraphQL.Repository
             _context.Database.EnsureCreated();
         }
 
-        public async Task AddCustomer(Customer customer)
-        {
-            //var _customer = new Customer()
-            //{
-            //    Name = customer.Name,
-            //    Address = customer.Address,
-            //    Age = customer.Age,
-            //    ContactNumber = customer.ContactNumber,
-            //    Email = customer.Email
-            //};
-
-            _context.Customer.Add(customer);
-            await _context.SaveChangesAsync();
-        }
-
         public async Task<ICollection<Customer>> GetAllCustomersAsync()
         {
             return await _context.Customer.ToListAsync();
@@ -48,6 +33,35 @@ namespace NetCore_GraphQL.Repository
         public async Task<IList<Customer>> GetCustomerByName(string name)
         {
             return await _context.Customer.Where(a => a.Name.Contains(name)).ToListAsync();
+        }
+
+        public async Task<Customer> AddCustomer(Customer customer)
+        {
+
+            _context.Customer.Add(customer);
+            await _context.SaveChangesAsync();
+            return customer;
+        }
+
+        public async Task<Customer> UpdateCustomer(Customer updatedCustomerData)
+        {
+            try
+            {
+                var updatedCustomer = (_context.Customer.Update(updatedCustomerData)).Entity;
+                await _context.SaveChangesAsync();
+                return updatedCustomer;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        public async Task DeleteCustomer(Customer customer)
+        {
+            _context.Remove(customer);
+            await _context.SaveChangesAsync();
         }
     }
 }

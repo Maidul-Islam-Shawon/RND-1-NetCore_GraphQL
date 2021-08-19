@@ -18,6 +18,7 @@ namespace NetCore_GraphQL.GraphQL.Queries
             Name = "Queries";
             Description = "The base query for all the entities in our object graph.";
 
+            //... Query: Return all Customers Details ....//
             FieldAsync<ListGraphType<CustomerType>, ICollection<Customer>>(
                 "AllCustomers",
                 "List of All Customers",
@@ -25,9 +26,10 @@ namespace NetCore_GraphQL.GraphQL.Queries
                     context=> customerRepository.GetAllCustomersAsync()
                 );
 
+            //... Query: Get Customer Detail By Id ....//
             FieldAsync<CustomerType, Customer>(
-                Name="CustomerByid",
-                Description ="Return a Customer based on Id",
+                "CustomerByid",
+                "Return a Customer based on Id",
                 arguments:
                     new QueryArguments(
                         new QueryArgument<NonNullGraphType<IdGraphType>>
@@ -35,13 +37,20 @@ namespace NetCore_GraphQL.GraphQL.Queries
                             Name="id",
                             Description="This is Unique Id of Customer"
                         }),
-                resolve: 
-                    context=> customerRepository.GetCustomerByIdAsync(context.GetArgument("id",Guid.Empty))
+                resolve:
+                    context =>
+                    {
+                        var id = context.GetArgument("id", Guid.Empty);
+                        return customerRepository.GetCustomerByIdAsync(id);
+                    } 
+                    
+                    
                 );
 
+            //... Query: Get Customer Detail By name ....//
             FieldAsync<ListGraphType<CustomerType>, IList<Customer>>(
-                Name = "CustomerByName",
-                Description = "Return a Customer based on Name",
+                "CustomerByName",
+                "Return a Customer based on Name",
                 arguments:
                     new QueryArguments(
                         new QueryArgument<StringGraphType>

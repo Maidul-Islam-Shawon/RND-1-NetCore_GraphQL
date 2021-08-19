@@ -7,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace NetCore_GraphQL.GraphQL.Types
 {
-    public class CustomerType : ObjectGraphType<Customer>
+    public class CustomerUpdateType : InputObjectGraphType<Customer>
     {
-        public CustomerType()
+        public CustomerUpdateType()
         {
-            Name = "Customer";
-            Description = "A List of Custmers data";
-            Field(a => a.Id, nullable:true).Description("Id of the Customer");
-            Field(a => a.Name, nullable: true).Description("Name of the Customer");
+            Name = "CustomerUpdate";     //Name of Input Type
+            Description = "Update Customer Information";  //Description of Input Type
+
+            //...include fields which will be use as input field...//
+            Field(a => a.Name, nullable:true).Description("Name of the Customer");
             Field(a => a.Age, nullable: true).Description("Age of the Customer");
             Field(a => a.Email, nullable: true).Description("Email of the Customer");
             Field(a => a.ContactNumber, nullable: true).Description("Contact Number of the Cusomer");
