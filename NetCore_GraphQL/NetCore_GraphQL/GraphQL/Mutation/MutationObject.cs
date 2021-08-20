@@ -64,7 +64,7 @@ namespace NetCore_GraphQL.GraphQL.Mutation
                    async context =>
                     {
                         var Id = context.GetArgument<Guid>("id");
-                        var customer = context.GetArgument<Customer>("customer");
+                        var customer = context.GetArgument<CustomerVM>("customer");
 
                         var existingCustomer = await customerRepository.GetCustomerByIdAsync(Id);
 
@@ -74,13 +74,13 @@ namespace NetCore_GraphQL.GraphQL.Mutation
                             return null;
                         }
 
-                        existingCustomer.Name = customer.Name == null ? existingCustomer.Name : customer.Name;
-                        existingCustomer.Email = customer.Email == null ? existingCustomer.Email : customer.Email;
-                        existingCustomer.ContactNumber = customer.ContactNumber == null ? existingCustomer.ContactNumber : customer.ContactNumber;
-                        existingCustomer.Address = customer.Address == null ? existingCustomer.Address : customer.Address;
-                        existingCustomer.Age = customer.Age == 0 ? existingCustomer.Age : customer.Age;
+                        //existingCustomer.Name = customer.Name == null ? existingCustomer.Name : customer.Name;
+                        //existingCustomer.Email = customer.Email == null ? existingCustomer.Email : customer.Email;
+                        //existingCustomer.ContactNumber = customer.ContactNumber == null ? existingCustomer.ContactNumber : customer.ContactNumber;
+                        //existingCustomer.Address = customer.Address == null ? existingCustomer.Address : customer.Address;
+                        //existingCustomer.Age = customer.Age == 0 ? existingCustomer.Age : customer.Age;
 
-                        return await customerRepository.UpdateCustomer(existingCustomer);
+                        return await customerRepository.UpdateCustomer(Id, customer);
                     }
                 );
 

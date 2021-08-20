@@ -13,7 +13,7 @@ namespace NetCore_GraphQL.Repository.Interface
         Task<Customer> GetCustomerByIdAsync(Guid id);
         Task<IList<Customer>> GetCustomerByName(string name);
         Task<Customer> AddCustomer(Customer customer);
-        Task<Customer> UpdateCustomer(Customer updatedCustomerData);
+        Task<Customer> UpdateCustomer(Guid id, CustomerVM updatedCustomerData);
         Task DeleteCustomer(Customer customer);
     }
 }

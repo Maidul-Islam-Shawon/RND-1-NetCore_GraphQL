@@ -47,9 +47,11 @@ namespace NetCore_GraphQL
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("CorsPolicy");
+
             app.UseGraphQL<AppSchema>();
 
-            app.UseGraphQLPlayground();
+            app.UseGraphQLPlayground(path: "/");
 
             app.UseHttpsRedirection();
 

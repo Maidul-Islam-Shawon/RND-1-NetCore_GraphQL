@@ -1,5 +1,6 @@
 ﻿using GraphQL.Types;
 using NetCore_GraphQL.Data.Entities;
+using NetCore_GraphQL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NetCore_GraphQL.GraphQL.Types
 {
-    public class CustomerUpdateType : InputObjectGraphType<Customer>
+    public class CustomerUpdateType : InputObjectGraphType<CustomerVM>
     {
         public CustomerUpdateType()
         {

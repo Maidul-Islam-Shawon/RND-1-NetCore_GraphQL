@@ -43,13 +43,20 @@ namespace NetCore_GraphQL.Repository
             return customer;
         }
 
-        public async Task<Customer> UpdateCustomer(Customer updatedCustomerData)
+        public async Task<Customer> UpdateCustomer(Guid id, CustomerVM updatedCustomerData)
         {
             try
             {
-                var updatedCustomer = (_context.Customer.Update(updatedCustomerData)).Entity;
-                await _context.SaveChangesAsync();
-                return updatedCustomer;
+                var customer = await _context.Customer.FirstOrDefaultAsync(m => m.Id == id);
+
+                if (customer != null)
+                {
+                    _context.Entry(customer).CurrentValues.SetValues(updatedCustomerData);
+                    await _context.SaveChangesAsync();
+                    return customer;
+                }
+                
+                return customer;
             }
             catch (Exception ex)
             {
