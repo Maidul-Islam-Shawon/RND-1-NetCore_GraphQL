@@ -35,7 +35,7 @@ namespace NetCore_GraphQL
 
             services.ConfigureGraphQl();
 
-            services.AddControllers();
+            //services.AddControllers();
 
         }
 
@@ -53,16 +53,16 @@ namespace NetCore_GraphQL
 
             app.UseGraphQLPlayground(path: "/");
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
-            app.UseRouting();
+            //app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllers();
+            //});
         }
     }
 }

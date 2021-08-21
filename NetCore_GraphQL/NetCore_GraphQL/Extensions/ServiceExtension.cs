@@ -45,10 +45,5 @@ namespace NetCore_GraphQL.Extensions
                 .AddSystemTextJson()
                 .AddDataLoader();
         }
-
-        public static void ConfigureAutoMapper(this IServiceCollection services)
-        {
-
-        }
     }
 }
