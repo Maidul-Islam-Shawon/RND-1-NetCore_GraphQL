@@ -13,12 +13,12 @@ namespace NetCore_GraphQL.GraphQL.Types
         {
             Name = "Customer";
             Description = "A List of Custmers data";
-            Field(a => a.Id).Description("Id of the Customer");
-            Field(a => a.Name).Description("Name of the Customer");
-            Field(a => a.Age).Description("Age of the Customer");
-            Field(a => a.Email).Description("Email of the Customer");
-            Field(a => a.ContactNumber).Description("Contact Number of the Cusomer");
-            Field(a => a.Address).Description("Address of the Customer");
+            Field(a => a.Id, nullable: true).Description("Id of the Customer");
+            Field(a => a.Name, nullable: true).Description("Name of the Customer");
+            Field(a => a.Age, nullable: true).Description("Age of the Customer");
+            Field(a => a.Email, nullable: true).Description("Email of the Customer");
+            Field(a => a.ContactNumber, nullable: true).Description("Contact Number of the Cusomer");
+            Field(a => a.Address, nullable: true).Description("Address of the Customer");
         }
     }
 }

@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASAI\\R&D\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {}
+    "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {}
   },
   "projects": {
-    "D:\\ASAI\\R&D\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {
+    "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASAI\\R&D\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
+        "projectUniqueName": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
         "projectName": "NetCore_GraphQL",
-        "projectPath": "D:\\ASAI\\R&D\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
-        "packagesPath": "C:\\Users\\shawon\\.nuget\\packages\\",
-        "outputPath": "D:\\ASAI\\R&D\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\obj\\",
+        "projectPath": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
+        "packagesPath": "C:\\Users\\maidul\\.nuget\\packages\\",
+        "outputPath": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\shawon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maidul\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
