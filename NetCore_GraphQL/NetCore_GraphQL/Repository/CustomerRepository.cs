@@ -17,24 +17,28 @@ namespace NetCore_GraphQL.Repository
         public CustomerRepository(NetCoreGraphQL_Context context)
         {
             this._context = context;
-            _context.Database.EnsureCreated();
+            _context.Database.EnsureCreated();  //Database will create
         }
 
+        //....below function will return all customers from database......//
         public async Task<ICollection<Customer>> GetAllCustomersAsync()
         {
             return await _context.Customer.ToListAsync();
         }
 
+        //....below function will return single customer by id from database......//
         public async Task<Customer> GetCustomerByIdAsync(Guid id)
         {
             return await _context.Customer.Where(m => m.Id == id).FirstOrDefaultAsync();
         }
 
+        //....below function will return single customer by name from database......//
         public async Task<IList<Customer>> GetCustomerByName(string name)
         {
             return await _context.Customer.Where(a => a.Name.Contains(name)).ToListAsync();
         }
 
+        //....below function to create a new customer......//
         public async Task<Customer> AddCustomer(Customer customer)
         {
 
@@ -43,6 +47,7 @@ namespace NetCore_GraphQL.Repository
             return customer;
         }
 
+        //....below function to Update a existing customer data......//
         public async Task<Customer> UpdateCustomer(Guid id, CustomerVM updatedCustomerData)
         {
             try
@@ -65,6 +70,7 @@ namespace NetCore_GraphQL.Repository
 
         }
 
+        //....below function to delete a new customer......//
         public async Task DeleteCustomer(Customer customer)
         {
             _context.Remove(customer);
