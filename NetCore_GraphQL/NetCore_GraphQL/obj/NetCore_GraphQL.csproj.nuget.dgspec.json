@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {}
+    "D:\\ASAI\\kubernetes\\RND-8\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {}
   },
   "projects": {
-    "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {
+    "D:\\ASAI\\kubernetes\\RND-8\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
+        "projectUniqueName": "D:\\ASAI\\kubernetes\\RND-8\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
         "projectName": "NetCore_GraphQL",
-        "projectPath": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
-        "packagesPath": "C:\\Users\\maidul\\.nuget\\packages\\",
-        "outputPath": "D:\\RandD\\RND-1\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\obj\\",
+        "projectPath": "D:\\ASAI\\kubernetes\\RND-8\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL.csproj",
+        "packagesPath": "C:\\Users\\shawon\\.nuget\\packages\\",
+        "outputPath": "D:\\ASAI\\kubernetes\\RND-8\\RND-1-NetCore_GraphQL\\NetCore_GraphQL\\NetCore_GraphQL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\maidul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\shawon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,6 +81,10 @@
               "target": "Package",
               "version": "[5.0.8, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
@@ -101,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
