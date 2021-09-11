@@ -1,4 +1,4 @@
-This text is coming from branch 2.
+This text is coming from branch 2 is great.
 
 
 Updated from Branch -1
